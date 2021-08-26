@@ -1,6 +1,10 @@
 import discord
 import os
 import json
+from configparser import ConfigParser
+
+config = ConfigParser()
+config.read('config.ini')
 
 
 class FoobarDB(object):
@@ -77,4 +81,4 @@ class MyClient(discord.Client):
 
 
 client = MyClient()
-client.run("")
+client.run(config["discord"].get('token'))

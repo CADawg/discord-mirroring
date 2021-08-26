@@ -1,0 +1,4 @@
+venv
+.idea
+channels.db
+config.ini
